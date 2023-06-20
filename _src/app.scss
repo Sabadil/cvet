@@ -1,0 +1,27 @@
+$black:#323436;
+$blue:#0065BD;
+$light_blue:#00A1DE;
+$dark_grey:#747678;
+$grey:#ADAFAF;
+$white:#FFFFFF;
+
+$main_font: "Inter", sans-serif;
+$title_font: "MicraDI", sans-serif;
+
+$xs: 430px;
+$sm: 768px;
+$md: 1024px;
+$mm: 1200px;
+$lg: 1440px;
+
+.container {
+    width: 100%;
+    padding: 0 40px;
+}
+
+.test {
+    font-family: $title_font;
+}
+
+
+//MAIN STYLES//
