@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ViteScssStarter</title>
+    <title>cvet</title>
     <link rel="icon" href="">
     <link rel="apple-touch-icon" href="">
     <meta name="description" content=""/>
@@ -19,9 +19,239 @@
     <meta name="theme-color" content="#f6f3ff" media="(prefers-color-scheme: dark)">
   </head>
   <body>
-    <div class="test">
-      123
-    </div>
+    <header>
+      <section>
+        <div class="container">
+          <div class="header">
+            <div class="header__logo">
+              <img src="assets/images/logo.svg" alt="logo">
+            </div>
+            <div class="header__nav">
+              <ul>
+                <li>
+                  <a href="#">Компания</a>
+                </li>
+                <li>
+                  <a href="#" class="header__nav-dropdown">
+                    Оборудование
+                    <svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2.13623 2.20093L6.63623 6.70105L11.1362 2.20093" stroke="#323436" stroke-width="2" stroke-linecap="square"/>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">Услуги</a>
+                </li>
+                <li>
+                  <a href="#">Новости</a>
+                </li>
+                <li>
+                  <a href="#">Контакты</a>
+                </li>
+              </ul>
+            </div>
+            <div class="header__phone">
+              <a href="tel:+79203800299">+7 920 380-02-99</a>
+            </div>
+            <div class="header__buttons">
+              <div class="hedaer__buttons--search">
+                <!-- <input type="text" class="header__buttons--search-input" placeholder="Type to Search..."> -->
+                <button class="header__buttons--search-btn">
+                  <svg width="28" height="28" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="11.0803" cy="11.6765" r="6.83495" transform="rotate(-45 11.0803 11.6765)" stroke="#00A1DE" stroke-width="2"/>
+                    <path d="M21.1356 23.464L21.8427 24.1712L23.2569 22.7569L22.5498 22.0498L21.1356 23.464ZM15.5955 17.9239L21.1356 23.464L22.5498 22.0498L17.0097 16.5097L15.5955 17.9239Z" fill="#00A1DE"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="header__buttons--order">
+                <button class="header__buttons--order-btn">
+                  Заказать оборудование
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+    <main>
+      <section>
+        <div class="about">
+          <div class="container">
+            <div class="about__title">
+              <h2>
+                ОАО ЦВЕТ
+              </h2>
+              <span>один из лидеров машиностроительной отрасли</span>
+            </div>
+            <div class="about__descr">
+              <p>Специализируемся на изготовлении емкостного оборудования технического назначения, предлагаем своим клиентам весь спектр услуг.</p>
+            </div>
+            <div class="about__items">
+              <div class="about__items-item">
+                <img src="assets/images/about-item-1.svg" alt="">
+                <span class="about__items-item--text">На рынке более 55 лет</span>
+              </div>
+              <div class="about__items-item">
+                <img src="assets/images/about-item-2.svg" alt="">
+                <span class="about__items-item--text">Контроль качества на всех этапах производства</span>
+              </div>
+              <div class="about__items-item">
+                <img src="assets/images/about-item-3.svg" alt="">
+                <span class="about__items-item--text">Гибкая ценовая политика</span>
+              </div>
+              <div class="about__items-item">
+                <img src="assets/images/about-item-4.svg" alt="">
+                <span class="about__items-item--text">Планирование сроков поставки</span>
+              </div>
+            </div>
+            <div class="about__button">
+              <button class="about__button-btn">
+                Узнать о компании
+                <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.93801 1.5L17.938 9L9.93801 16.5" stroke="#00A1DE" stroke-width="2" stroke-linecap="square"/>
+                  <path d="M1 9.00012L17 9.00012" stroke="#00A1DE" stroke-width="2" stroke-linecap="square"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <div class="equip">
+            
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="news">
+          <div class="container">
+            <div class="news__top">
+              <h3 class="news__top--title">
+                Новости
+              </h3>
+              <a href="#" class="news__top--link">
+                <p>Смотреть все новости</p>
+                <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.93801 1.5L17.938 9L9.93801 16.5" stroke="#00A1DE" stroke-width="2" stroke-linecap="square"/>
+                  <path d="M1 9.00012L17 9.00012" stroke="#00A1DE" stroke-width="2" stroke-linecap="square"/>
+                </svg>
+              </a>
+            </div>
+            <div class="news__content">
+              <div class="swiper news__content--swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a href="#" class="news__content--swiper_content">
+                      <div class="news__content--swiper_content-img">
+                        <img src="assets/images/news-item.png" alt="news-item">
+                      </div>
+                      <div class="news__content--swiper_content-text">
+                        <span class="news__content--swiper_content-text-date">
+                          21.05.23
+                        </span>
+                        <p class="news__content--swiper_content-text-title">
+                          Годового общего собрания акционеров открытого акционерного общества «Цвет»
+                        </p>
+                      </div>
+                      <div class="news__content--swiper_content-arrow">
+                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M9.93801 1.5L17.938 9L9.93801 16.5" stroke="#00A1DE" stroke-width="2" stroke-linecap="square"/>
+                          <path d="M1 9.00012L17 9.00012" stroke="#00A1DE" stroke-width="2" stroke-linecap="square"/>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#" class="news__content--swiper_content">
+                      <div class="news__content--swiper_content-img">
+                        <img src="assets/images/news-item.png" alt="news-item">
+                      </div>
+                      <div class="news__content--swiper_content-text">
+                        <span class="news__content--swiper_content-text-date">
+                          21.05.23
+                        </span>
+                        <p class="news__content--swiper_content-text-title">
+                          Годового общего собрания акционеров открытого акционерного общества «Цвет»
+                        </p>
+                      </div>
+                      <div class="news__content--swiper_content-arrow">
+                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M9.93801 1.5L17.938 9L9.93801 16.5" stroke="#00A1DE" stroke-width="2" stroke-linecap="square"/>
+                          <path d="M1 9.00012L17 9.00012" stroke="#00A1DE" stroke-width="2" stroke-linecap="square"/>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#" class="news__content--swiper_content">
+                      <div class="news__content--swiper_content-img">
+                        <img src="assets/images/news-item.png" alt="news-item">
+                      </div>
+                      <div class="news__content--swiper_content-text">
+                        <span class="news__content--swiper_content-text-date">
+                          21.05.23
+                        </span>
+                        <p class="news__content--swiper_content-text-title">
+                          Годового общего собрания акционеров открытого акционерного общества «Цвет»
+                        </p>
+                      </div>
+                      <div class="news__content--swiper_content-arrow">
+                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M9.93801 1.5L17.938 9L9.93801 16.5" stroke="#00A1DE" stroke-width="2" stroke-linecap="square"/>
+                          <path d="M1 9.00012L17 9.00012" stroke="#00A1DE" stroke-width="2" stroke-linecap="square"/>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="qna">
+          <div class="container">
+            <h4 class="qna__title">
+              Цвет отвечает
+            </h4>
+            <div class="qna__content">
+            <div class="qna__content-qna">
+              <div class="qna__content-qna_item" x-data=" { isOpen:false }">
+                <button class="qna__content-qna_item-btn" @click="isOpen = !isOpen">
+                  <p>Что такое газификатор? Принцип его работы</p>
+                  <svg :style="(isOpen) ? 'transform: rotate(180deg)' : ''" width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.13623 2.20093L7.13609 7.20093L12.136 2.20093" stroke="#00A1DE" stroke-width="2" stroke-linecap="square"/>
+                  </svg>
+                </button>
+                <div class="qna__content-qna_item-content" x-ref="container1" x-bind:style="isOpen ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+                  <div>
+                    123
+                  </div>
+                  <div>
+                    123
+                  </div>
+                  <div>
+                    123
+                  </div>
+                  <div>
+                    123
+                  </div>
+                  <div>
+                    123
+                  </div>
+                  <div>
+                    123
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <script type="module" src="app.js"></script>
   </body>
 </html>

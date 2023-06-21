@@ -10,4 +10,12 @@ import 'swiper/css/bundle';
 
 document.addEventListener('DOMContentLoaded', () => {
 
+
+
+    //SWIPERS //
+
+    const swiperNews = new Swiper(".news__content--swiper", {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      });
 })
