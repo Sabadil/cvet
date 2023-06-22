@@ -51,6 +51,36 @@ $lg: 1440px;
                     display: flex;
                     align-items: center;
                     gap: 6px;
+                    position: relative;
+
+                        &--content {
+                            position: absolute;
+                            padding-top: 40px;
+
+                            &-list {
+                                padding: 20px;
+                                background: #F3F5F5;
+                                box-shadow: 0px 4px 4px rgba(50, 52, 54, 0.15), 0px 2px 2px rgba(0, 101, 189, 0.2);
+                                border-radius: 20px;
+                                display: flex;
+                                flex-direction: column;
+
+                                    li {
+                                        padding: 10px 0 10px;
+                                        
+                                            a {
+                                                font-size: 18px;
+                                                line-height: 22px;
+                                                color: $black;
+                                                transition: all 0.3s;
+
+                                                    &:hover {
+                                                        color: $blue;
+                                                    }
+                                            }
+                                    }
+                            }
+                        }
                 }
         }
         &__phone {
@@ -355,18 +385,277 @@ $lg: 1440px;
             gap: 135px;
 
                 &-qna {
+                    flex: 80%;
                         &_item {
-                            width: 100%;
+                            
 
                                 &-btn {
                                     display: flex;
                                     align-items: center;
                                     justify-content: space-between;
+                                    padding: 20px 10px;
+                                    font-size: 20px;
+                                    line-height: 24px;
+                                    color: $black;
+                                    width: 100%;
+                                    
+                                    transition-duration: .3s;
+
+                                        svg {
+                                            transition-duration: .3s;
+                                        }
                                 }
                                 &-content {
                                     overflow: hidden;
+                                    max-height: 0;
+                                    transition: all 0.3s ease;
+                                    border-bottom: 1px solid $light_blue;
+                                    transition-timing-function: cubic-bezier(.4,0,.2,1);
+
+                                        &-item {
+                                            padding: 0px 10px 20px;
+                                            font-size: 16px;
+                                            line-height: 22px;
+                                        }
+                                }
+                        }
+                }
+                &-question {
+                    flex: 20%;
+                    padding: 50px 41px 60px 30px;
+                    background: #F3F5F5;
+                    position: relative;
+                    border-radius: 20px;
+
+                        &_text {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 16px;
+                            font-size: 16px;
+                            line-height: 22px;
+
+                                &-title {
+                                    font-size: 26px;
+                                    line-height: 33px;
+                                }
+                                &-items {
+                                    font-size: 16px;
+                                    line-height: 22px;
+                                    max-width: 255px;
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 20px;
+                                }
+                                &-btn {
+                                    margin-top: 14px;
+                                        button {
+                                            font-size: 18px;
+                                            line-height: 22px;
+                                            color: $light_blue;
+                                            padding: 18px 44px;
+                                            border: 1px solid $light_blue;
+                                            border-radius: 23px;
+                                            background: $white;
+                                            transition: all 0.3s;
+
+                                                &:hover {
+                                                    background: $blue;
+                                                    color: $white;
+                                                    box-shadow: 0px 4px 4px rgba(50, 52, 54, 0.15), 0px 2px 2px rgba(0, 101, 189, 0.2);
+                                                    border: 1px solid $blue;
+                                                }
+                                        }
                                 }
                         }
                 }
         }
+}
+.contacts {
+    margin-top: 100px;
+}
+.footer {
+    margin-top: 100px;
+    background: $blue;
+    padding: 40px 0 30px;
+
+        &__items {
+            display: grid;
+            grid-template-columns: repeat(12, minmax(0, 1fr));
+
+                &-logo {
+                    grid-column: span 3 / span 3;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 40px;
+
+                        &_btn {
+                            button {
+                                color: $white;
+                                display: flex;
+                                align-items: center;
+                                gap: 14px;
+                                padding: 18px 30px;
+                                background: transparent;
+                                border: 1px solid rgba(255, 255, 255, 0.3);
+                                border-radius: 23px;
+                                font-size: 18px;
+                                line-height: 22px;
+                                transition: all 0.3s;
+
+                                svg path {
+                                    transition: all 0.3s;
+                                }
+
+                                    &:hover {
+                                        background: $white;
+                                        border: 1px solid $white;
+                                        color: $blue;
+
+                                            svg path {
+                                                transition: all 0.3s;
+                                                stroke: $blue;
+                                            }
+                                    }
+                            }
+                        }
+                }
+
+                &-info {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 25px;
+                    grid-column: span 2 / span 2;
+
+                        &_title {
+                            font-size: 18px;
+                            line-height: 25px;
+                            font-weight: 600;
+                            color: $white;
+                        }
+
+                        &_list {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 20px;
+
+                                li a {
+                                    font-size: 16px;
+                                    line-height: 22px;
+                                    color: rgba(255, 255, 255, 0.7);
+                                    transition: all 0.3s;
+
+                                        &:hover {
+                                            color: $white;
+                                        }
+                                }
+                        }
+                }
+                &-catalog {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 25px;
+                    grid-column: span 4 / span 4;
+
+                        &_title {
+                            font-size: 18px;
+                            line-height: 25px;
+                            font-weight: 600;
+                            color: $white; 
+                        }
+                        &_list {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 20px;
+
+                                li a {
+                                    font-size: 16px;
+                                    line-height: 22px;
+                                    color: rgba(255, 255, 255, 0.7);
+                                    transition: all 0.3s;
+
+                                        &:hover {
+                                            color: $white;
+                                        }
+                                }
+                        }
+                }
+                &-contacts {
+                    grid-column: span 3 / span 3;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    color: $white;
+
+                        &_phone {
+                            font-size: 36px;
+                            line-height: 43px;
+                        }
+                        &_descr {
+                            color: rgba(255, 255, 255, 0.7);
+                            font-size: 16px;
+                            line-height: 22px;
+                            max-width: 300px;
+                        }
+                        &_mail {
+                            margin-top: 10px;
+                            font-size: 18px;
+                            line-height: 22px;
+                        }
+                        &_btn {
+                            margin-top: 15px;
+
+                                button {
+                                    padding: 18px 55.5px;
+                                    color: $white;
+                                    background: transparent;
+                                    border-radius: 23px;
+                                    border: 1px solid $white;
+                                    font-size: 18px;
+                                    line-height: 22px;
+                                    transition: all 0.3s;
+
+                                        &:hover {
+                                            background: $white;
+                                            color: $blue;
+                                        }
+                                }
+                        }
+                        &_social {
+                            margin-top: 25px;
+                            display: flex;
+                        }
+                }
+        }
+        &__bottom {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 65px;
+            padding-top: 22px;
+            border-top: 1px solid rgba(255, 255, 255, 0.4);
+
+                &-date {
+                    font-size: 16px;
+                    line-height: 22px;
+                    color: rgba(255, 255, 255, 0.5);
+                }
+                &-policy a{
+                    font-size: 16px;
+                    line-height: 22px;
+                    color: $white;
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.5);;
+                }
+                &-develop {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    font-size: 16px;
+                    line-height: 22px;
+                    
+
+                        span {
+                            color: rgba(255, 255, 255, 0.5);
+                        }
+                }
+        }
+    
 }

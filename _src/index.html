@@ -17,6 +17,7 @@
     <meta property="og:type" content="website" />
     <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#f6f3ff" media="(prefers-color-scheme: dark)">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
   </head>
   <body>
     <header>
@@ -32,12 +33,42 @@
                   <a href="#">Компания</a>
                 </li>
                 <li>
-                  <a href="#" class="header__nav-dropdown">
-                    Оборудование
-                    <svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M2.13623 2.20093L6.63623 6.70105L11.1362 2.20093" stroke="#323436" stroke-width="2" stroke-linecap="square"/>
-                    </svg>
-                  </a>
+                  <div x-data="{ showDropdown: false }">
+                    <a href="#" class="header__nav-dropdown" @mouseover="showDropdown = true" @mouseleave="showDropdown = false" @click="showDropdown = !showDropdown">
+                      Оборудование
+                      <svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.13623 2.20093L6.63623 6.70105L11.1362 2.20093" stroke="#323436" stroke-width="2" stroke-linecap="square"/>
+                      </svg>
+                    </a>
+                    <div class="header__nav-dropdown--content" x-cloak x-show="showDropdown" @mouseover="showDropdown = true" @mouseleave="showDropdown = false">
+                      <ul class="header__nav-dropdown--content-list">
+                        <li>
+                          <a href="#">Газификационная установка</a>
+                        </li>
+                        <li>
+                          <a href="#">Газосмесительные резервуары</a>
+                        </li>
+                        <li>
+                          <a href="#">Газификатор</a>
+                        </li>
+                        <li>
+                          <a href="#">Криоцилиндр</a>
+                        </li>
+                        <li>
+                          <a href="#">Газовые рампы</a>
+                        </li>
+                        <li>
+                          <a href="#">Резервуары для СПГ</a>
+                        </li>
+                        <li>
+                          <a href="#">Углекислотное оборудование: РХД и РХТУ</a>
+                        </li>
+                        <li>
+                          <a href="#">Цистерны транспортные криогенные</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </li>
                 <li>
                   <a href="#">Услуги</a>
@@ -217,41 +248,185 @@
               Цвет отвечает
             </h4>
             <div class="qna__content">
-            <div class="qna__content-qna">
-              <div class="qna__content-qna_item" x-data=" { isOpen:false }">
-                <button class="qna__content-qna_item-btn" @click="isOpen = !isOpen">
-                  <p>Что такое газификатор? Принцип его работы</p>
-                  <svg :style="(isOpen) ? 'transform: rotate(180deg)' : ''" width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M2.13623 2.20093L7.13609 7.20093L12.136 2.20093" stroke="#00A1DE" stroke-width="2" stroke-linecap="square"/>
-                  </svg>
-                </button>
-                <div class="qna__content-qna_item-content" x-ref="container1" x-bind:style="isOpen ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
-                  <div>
-                    123
+              <div class="qna__content-qna">
+                <div class="qna__content-qna_item" x-data=" { isOpen:false }">
+                  <button class="qna__content-qna_item-btn" @click="isOpen = !isOpen" :style="(isOpen) ? 'border-bottom:none;' : ''">
+                    <p>Что такое газификатор? Принцип его работы</p>
+                    <svg :style="(isOpen) ? 'transform: rotate(180deg)' : ''" width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2.13623 2.20093L7.13609 7.20093L12.136 2.20093" stroke="#00A1DE" stroke-width="2" stroke-linecap="square"/>
+                    </svg>
+                  </button>
+                  <div class="qna__content-qna_item-content" x-ref="container1" x-bind:style="isOpen ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+                    <div class="qna__content-qna_item-content-item">
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, alias quasi tempore quo dignissimos nemo, hic, id ullam ratione quae doloremque rerum dicta quos laboriosam rem aliquam architecto laudantium dolores?
+                    </div>
                   </div>
-                  <div>
-                    123
+                </div>
+                <div class="qna__content-qna_item" x-data=" { isOpen:false }">
+                  <button class="qna__content-qna_item-btn" @click="isOpen = !isOpen" :style="(isOpen) ? 'border-bottom:none;' : ''">
+                    <p>Раскачка технических газов по баллонам: для чего, как и насколько сложно?</p>
+                    <svg :style="(isOpen) ? 'transform: rotate(180deg)' : ''" width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2.13623 2.20093L7.13609 7.20093L12.136 2.20093" stroke="#00A1DE" stroke-width="2" stroke-linecap="square"/>
+                    </svg>
+                  </button>
+                  <div class="qna__content-qna_item-content" x-ref="container1" x-bind:style="isOpen ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+                    <div class="qna__content-qna_item-content-item">
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, alias quasi tempore quo dignissimos nemo, hic, id ullam ratione quae doloremque rerum dicta quos laboriosam rem aliquam architecto laudantium dolores?
+                    </div>
                   </div>
-                  <div>
-                    123
+                </div>
+                <div class="qna__content-qna_item" x-data=" { isOpen:false }">
+                  <button class="qna__content-qna_item-btn" @click="isOpen = !isOpen" :style="(isOpen) ? 'border-bottom:none;' : ''">
+                    <p>Раскачка технических газов по баллонам: для чего, как и насколько сложно?</p>
+                    <svg :style="(isOpen) ? 'transform: rotate(180deg)' : ''" width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2.13623 2.20093L7.13609 7.20093L12.136 2.20093" stroke="#00A1DE" stroke-width="2" stroke-linecap="square"/>
+                    </svg>
+                  </button>
+                  <div class="qna__content-qna_item-content" x-ref="container1" x-bind:style="isOpen ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+                    <div class="qna__content-qna_item-content-item">
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, alias quasi tempore quo dignissimos nemo, hic, id ullam ratione quae doloremque rerum dicta quos laboriosam rem aliquam architecto laudantium dolores?
+                    </div>
                   </div>
-                  <div>
-                    123
+                </div>
+              </div>
+              <div class="qna__content-question">
+                <div class="qna__content-question_text">
+                  <span class="qna__content-question_text-title">
+                    Остались вопросы?
+                  </span>
+                  <div class="qna__content-question_text-items">
+                    <p>Здесь мы постарались ответить на самые популярные вопросы.</p>
+                    <p>Если вы не нашли ответа, задайте вопрос нам напрямую, через форму.</p>
                   </div>
-                  <div>
-                    123
-                  </div>
-                  <div>
-                    123
+                  <div class="qna__content-question_text-btn">
+                    <button>
+                      Задать свой вопрос
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
-            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <div class="contacts">
+            <div id="map" style="width: 100%; height: 400px;"></div>
           </div>
         </div>
       </section>
     </main>
+    <footer>
+      <div class="footer">
+        <div class="container">
+          <div class="footer__items">
+            <div class="footer__items-logo">
+              <div>
+                <img src="assets/images/logo-footer.svg" alt="logo-footer">
+              </div>
+              <div class="footer__items-logo_btn">
+                <button>
+                  Корпоративный сайт
+                  <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.93802 1.5L17.938 9L9.93802 16.5" stroke="white" stroke-width="2" stroke-linecap="square"/>
+                    <path d="M1 9L17 9" stroke="white" stroke-width="2" stroke-linecap="square"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="footer__items-info">
+              <span class="footer__items-info_title">
+                Информация
+              </span>
+              <ul class="footer__items-info_list">
+                <li>
+                  <a href="#">Компания</a>
+                </li>
+                <li>
+                  <a href="#">Оборудование</a>
+                </li>
+                <li>
+                  <a href="#">Услуги</a>
+                </li>
+                <li>
+                  <a href="#">Клиентам</a>
+                </li>
+                <li>
+                  <a href="#">Контакты</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__items-catalog">
+              <span class="footer__items-catalog_title">
+                Каталог
+              </span>
+              <ul class="footer__items-catalog_list">
+                <li>
+                  <a href="#">Газосмесительные установки</a>
+                </li>
+                <li>
+                  <a href="#">Газификаторы</a>
+                </li>
+                <li>
+                  <a href="#">ГХК</a>
+                </li>
+                <li>
+                  <a href="#">Криоцилиндр</a>
+                </li>
+                <li>
+                  <a href="#">Газовые рампа</a>
+                </li>
+                <li>
+                  <a href="#">Резервуары для СПГ</a>
+                </li>
+                <li>
+                  <a href="#">Углекислотное оборудование: РХД и РХТУ</a>
+                </li>
+                <li>
+                  <a href="#">Цистерны транспортные криогенные</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__items-contacts">
+              <a class="footer__items-contacts_phone" target="_blank" href="tel:+79203800299">+7 920 380-02-99</a>
+              <p class="footer__items-contacts_descr">Отдел продаж криогенного оборудования</p>
+              <a href="mailto:natalya.kuritsyna@cwet.ru" class="footer__items-contacts_mail">natalya.kuritsyna@cwet.ru</a>
+              <div class="footer__items-contacts_btn">
+                <button>Заказать оборудование</button>
+              </div>
+              <div class="footer__items-contacts_social">
+                <a href="#" target="_blank" class="footer__items-contacts_social-item">
+                  <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 27.84C0 14.7161 0 8.15416 4.07708 4.07708C8.15416 0 14.7161 0 27.84 0H30.16C43.2839 0 49.8458 0 53.9229 4.07708C58 8.15416 58 14.7161 58 27.84V30.16C58 43.2839 58 49.8458 53.9229 53.9229C49.8458 58 43.2839 58 30.16 58H27.84C14.7161 58 8.15416 58 4.07708 53.9229C0 49.8458 0 43.2839 0 30.16V27.84Z" fill="white"/>
+                    <path d="M30.3709 41.1425C17.5923 41.1425 10.3037 32.08 10 17H16.401C16.6112 28.0683 21.3301 32.7566 25.0678 33.7233V17H31.0952V26.5458C34.7862 26.1349 38.6637 21.785 39.972 17H45.9993C44.9947 22.8967 40.7897 27.2466 37.7995 29.0349C40.7897 30.4849 45.579 34.2791 47.4012 41.1425H40.7664C39.3414 36.5508 35.7908 32.9983 31.0952 32.5149V41.1425H30.3709Z" fill="#0065BD"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <p class="footer__bottom-date">© Цвет, 2023</p>
+            <div class="footer__bottom-policy">
+              <a class="" href="#" target="_blank">Политика обработки персональных данных</a>
+            </div>
+            <a href="ms-net.ru" target="_blank" class="footer__bottom-develop"> 
+              <span>сделано в</span>
+                <svg width="105" height="15" viewBox="0 0 105 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="6.5" cy="7" r="6.5" fill="url(#paint0_linear_110_2472)"/>
+                  <path d="M18.4091 0.863636H20.0909L24.0455 10.5227H24.1818L28.1364 0.863636H29.8182V12.5H28.5V3.65909H28.3864L24.75 12.5H23.4773L19.8409 3.65909H19.7273V12.5H18.4091V0.863636ZM36.1207 12.6818C35.2798 12.6818 34.5545 12.4962 33.9446 12.125C33.3385 11.75 32.8707 11.2273 32.5412 10.5568C32.2154 9.88258 32.0526 9.09848 32.0526 8.20455C32.0526 7.31061 32.2154 6.52273 32.5412 5.84091C32.8707 5.1553 33.3291 4.62121 33.9162 4.23864C34.5071 3.85227 35.1965 3.65909 35.9844 3.65909C36.4389 3.65909 36.8878 3.73485 37.331 3.88636C37.7741 4.03788 38.1776 4.28409 38.5412 4.625C38.9048 4.96212 39.1946 5.40909 39.4105 5.96591C39.6264 6.52273 39.7344 7.20833 39.7344 8.02273V8.59091H33.0071V7.43182H38.3707C38.3707 6.93939 38.2723 6.5 38.0753 6.11364C37.8821 5.72727 37.6056 5.42235 37.2457 5.19886C36.8897 4.97538 36.4692 4.86364 35.9844 4.86364C35.4503 4.86364 34.9882 4.99621 34.598 5.26136C34.2116 5.52273 33.9143 5.86364 33.706 6.28409C33.4976 6.70455 33.3935 7.1553 33.3935 7.63636V8.40909C33.3935 9.06818 33.5071 9.62689 33.7344 10.0852C33.9654 10.5398 34.2855 10.8864 34.6946 11.125C35.1037 11.3598 35.5791 11.4773 36.1207 11.4773C36.473 11.4773 36.7912 11.428 37.0753 11.3295C37.3632 11.2273 37.6113 11.0758 37.8196 10.875C38.0279 10.6705 38.1889 10.4167 38.3026 10.1136L39.598 10.4773C39.4616 10.9167 39.2325 11.303 38.9105 11.6364C38.5885 11.9659 38.1908 12.2235 37.7173 12.4091C37.2438 12.5909 36.7116 12.6818 36.1207 12.6818ZM40.8423 15V11.25H41.5696C41.7476 11.0644 41.901 10.8636 42.0298 10.6477C42.1586 10.4318 42.2704 10.1761 42.3651 9.88068C42.4635 9.58144 42.5469 9.2178 42.6151 8.78977C42.6832 8.35795 42.7438 7.83712 42.7969 7.22727L43.0923 3.77273H48.6378V11.25H49.9787V15H48.6378V12.5H42.1832V15H40.8423ZM43.0923 11.25H47.2969V5.02273H44.3423L44.1151 7.22727C44.0204 8.14015 43.9029 8.9375 43.7628 9.61932C43.6226 10.3011 43.3991 10.8447 43.0923 11.25ZM53.0994 10.5227L57.304 3.77273H58.8494V12.5H57.5085V5.75L53.3267 12.5H51.7585V3.77273H53.0994V10.5227ZM63.8736 12.7045C63.3205 12.7045 62.8187 12.6004 62.3679 12.392C61.9171 12.1799 61.5592 11.875 61.294 11.4773C61.0289 11.0758 60.8963 10.5909 60.8963 10.0227C60.8963 9.52273 60.9948 9.11742 61.1918 8.80682C61.3887 8.49242 61.652 8.24621 61.9815 8.06818C62.3111 7.89015 62.6747 7.75758 63.0724 7.67045C63.474 7.57955 63.8774 7.50758 64.2827 7.45455C64.813 7.38636 65.2429 7.33523 65.5724 7.30114C65.9058 7.26326 66.1482 7.20076 66.2997 7.11364C66.455 7.02652 66.5327 6.875 66.5327 6.65909V6.61364C66.5327 6.05303 66.3793 5.61742 66.0724 5.30682C65.7694 4.99621 65.3092 4.84091 64.6918 4.84091C64.0516 4.84091 63.5497 4.98106 63.1861 5.26136C62.8224 5.54167 62.5668 5.84091 62.419 6.15909L61.1463 5.70455C61.3736 5.17424 61.6766 4.76136 62.0554 4.46591C62.438 4.16667 62.8546 3.95833 63.3054 3.84091C63.7599 3.7197 64.2069 3.65909 64.6463 3.65909C64.9266 3.65909 65.2486 3.69318 65.6122 3.76136C65.9796 3.82576 66.3338 3.96023 66.6747 4.16477C67.0194 4.36932 67.3054 4.67803 67.5327 5.09091C67.7599 5.50379 67.8736 6.05682 67.8736 6.75V12.5H66.5327V11.3182H66.4645C66.3736 11.5076 66.2221 11.7102 66.0099 11.9261C65.7978 12.142 65.5156 12.3258 65.1634 12.4773C64.8111 12.6288 64.3812 12.7045 63.8736 12.7045ZM64.0781 11.5C64.6084 11.5 65.0554 11.3958 65.419 11.1875C65.7865 10.9792 66.063 10.7102 66.2486 10.3807C66.438 10.0511 66.5327 9.70455 66.5327 9.34091V8.11364C66.4759 8.18182 66.3509 8.24432 66.1577 8.30114C65.9683 8.35417 65.7486 8.40151 65.4986 8.44318C65.2524 8.48106 65.0118 8.51515 64.777 8.54545C64.5459 8.57197 64.3584 8.5947 64.2145 8.61364C63.866 8.65909 63.5402 8.73295 63.2372 8.83523C62.938 8.93371 62.6955 9.08333 62.5099 9.28409C62.3281 9.48106 62.2372 9.75 62.2372 10.0909C62.2372 10.5568 62.4096 10.9091 62.7543 11.1477C63.1027 11.3826 63.544 11.5 64.0781 11.5ZM73.8665 12.6818C73.0483 12.6818 72.3438 12.4886 71.7528 12.1023C71.1619 11.7159 70.7074 11.1837 70.3892 10.5057C70.071 9.82765 69.9119 9.05303 69.9119 8.18182C69.9119 7.29545 70.0748 6.51326 70.4006 5.83523C70.7301 5.15341 71.1884 4.62121 71.7756 4.23864C72.3665 3.85227 73.0559 3.65909 73.8438 3.65909C74.4574 3.65909 75.0104 3.77273 75.5028 4C75.9953 4.22727 76.3987 4.54545 76.7131 4.95455C77.0275 5.36364 77.2225 5.84091 77.2983 6.38636H75.9574C75.8551 5.98864 75.6278 5.63636 75.2756 5.32955C74.9271 5.01894 74.4574 4.86364 73.8665 4.86364C73.3438 4.86364 72.8854 5 72.4915 5.27273C72.1013 5.54167 71.7964 5.92235 71.5767 6.41477C71.3608 6.90341 71.2528 7.47727 71.2528 8.13636C71.2528 8.81061 71.3589 9.39773 71.571 9.89773C71.7869 10.3977 72.09 10.786 72.4801 11.0625C72.8741 11.339 73.3362 11.4773 73.8665 11.4773C74.215 11.4773 74.5312 11.4167 74.8153 11.2955C75.0994 11.1742 75.34 11 75.5369 10.7727C75.7339 10.5455 75.8741 10.2727 75.9574 9.95455H77.2983C77.2225 10.4697 77.035 10.9337 76.7358 11.3466C76.4403 11.7557 76.0483 12.0814 75.5597 12.3239C75.0748 12.5625 74.5104 12.6818 73.8665 12.6818ZM82.9176 12.6818C82.0767 12.6818 81.3513 12.4962 80.7415 12.125C80.1354 11.75 79.6676 11.2273 79.3381 10.5568C79.0123 9.88258 78.8494 9.09848 78.8494 8.20455C78.8494 7.31061 79.0123 6.52273 79.3381 5.84091C79.6676 5.1553 80.1259 4.62121 80.7131 4.23864C81.304 3.85227 81.9934 3.65909 82.7812 3.65909C83.2358 3.65909 83.6847 3.73485 84.1278 3.88636C84.571 4.03788 84.9744 4.28409 85.3381 4.625C85.7017 4.96212 85.9915 5.40909 86.2074 5.96591C86.4233 6.52273 86.5312 7.20833 86.5312 8.02273V8.59091H79.804V7.43182H85.1676C85.1676 6.93939 85.0691 6.5 84.8722 6.11364C84.679 5.72727 84.4025 5.42235 84.0426 5.19886C83.6866 4.97538 83.2661 4.86364 82.7812 4.86364C82.2472 4.86364 81.785 4.99621 81.3949 5.26136C81.0085 5.52273 80.7112 5.86364 80.5028 6.28409C80.2945 6.70455 80.1903 7.1553 80.1903 7.63636V8.40909C80.1903 9.06818 80.304 9.62689 80.5312 10.0852C80.7623 10.5398 81.0824 10.8864 81.4915 11.125C81.9006 11.3598 82.3759 11.4773 82.9176 11.4773C83.2699 11.4773 83.5881 11.428 83.8722 11.3295C84.16 11.2273 84.4081 11.0758 84.6165 10.875C84.8248 10.6705 84.9858 10.4167 85.0994 10.1136L86.3949 10.4773C86.2585 10.9167 86.0294 11.303 85.7074 11.6364C85.3854 11.9659 84.9877 12.2235 84.5142 12.4091C84.0407 12.5909 83.5085 12.6818 82.9176 12.6818ZM87.7585 5.02273V3.77273H94.8494V5.02273H91.9858V12.5H90.6449V5.02273H87.7585ZM97.9645 6.93182H100.464C101.487 6.93182 102.269 7.19129 102.811 7.71023C103.353 8.22917 103.624 8.88636 103.624 9.68182C103.624 10.2045 103.502 10.6799 103.26 11.108C103.018 11.5322 102.661 11.8712 102.192 12.125C101.722 12.375 101.146 12.5 100.464 12.5H96.8054V3.77273H98.1463V11.25H100.464C100.995 11.25 101.43 11.1098 101.771 10.8295C102.112 10.5492 102.283 10.1894 102.283 9.75C102.283 9.28788 102.112 8.91098 101.771 8.61932C101.43 8.32765 100.995 8.18182 100.464 8.18182H97.9645V6.93182Z" fill="white"/>
+                  <defs>
+                  <linearGradient id="paint0_linear_110_2472" x1="2.70833" y1="5.91667" x2="23.8333" y2="-4.375" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="white"/>
+                  <stop offset="1" stop-color="white" stop-opacity="0"/>
+                  </linearGradient>
+                  </defs>
+                </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script type="module" src="app.js"></script>
   </body>
 </html>
