@@ -55,7 +55,7 @@ $lg: 1440px;
 
                         &--content {
                             position: absolute;
-                            padding-top: 40px;
+                            padding-top: 25px;
 
                             &-list {
                                 padding: 20px;
@@ -144,6 +144,14 @@ $lg: 1440px;
                         }
                 }
         }
+}
+
+.main {
+    .main-swiper {
+        img {
+            width: 100%;
+        }
+    }
 }
 
 .about {
