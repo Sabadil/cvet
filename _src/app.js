@@ -20,6 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
         el: ".swiper-pagination",
         clickable: true,
       },
+      navigation: {
+        nextEl: ".main-swiper-button-next",
+        prevEl: ".main-swiper-button-prev",
+      },
     });
 
     const swiperNews = new Swiper(".news__content--swiper", {

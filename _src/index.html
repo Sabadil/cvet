@@ -20,7 +20,7 @@
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
   </head>
   <body>
-    <header>
+    <header style="display: none;">
       <section>
         <div class="container">
           <div class="header">
@@ -105,13 +105,32 @@
       </section>
     </header>
     <main>
-      <section>
+      <section style="display: none;">
         <div class="main">
           <div class="main__content">
+            <div class="main__content-item container">
+              <h1 class="main__content-item--title">
+                производство и модернизация криогенного оборудования под заказ
+              </h1>
+              <div class="main__content-item--buttons">
+                <button class="main__content-item--buttons-show">
+                  Смотреть оборудование
+                  <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.93802 1.5L17.938 9L9.93802 16.5" stroke="white" stroke-width="2" stroke-linecap="square"/>
+                    <path d="M1 9L17 9" stroke="white" stroke-width="2" stroke-linecap="square"/>
+                  </svg>
+                </button>
+                <button class="main__content-item--buttons-order">
+                  Оставить заявку
+                </button>
+              </div>
+            </div>
             <div class="swiper main-swiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <img src="assets/images/test-main.png" alt="">
+                  <img class="main-swiper-img-pc" src="assets/images/test-main.png" alt="">
+                  <img class="main-swiper-img-tablet" src="assets/images/main-tablet.png" alt="">
+                  <img class="main-swiper-img-phone" src="assets/images/main-phone.png" alt="">
                 </div>
                 <div class="swiper-slide">Slide 2</div>
                 <div class="swiper-slide">Slide 3</div>
@@ -122,7 +141,19 @@
                 <div class="swiper-slide">Slide 8</div>
                 <div class="swiper-slide">Slide 9</div>
               </div>
-              <div class="swiper-pagination"></div>
+              <div class="swiper-main_nav container">
+                <div class="main-swiper-button-prev">
+                  <svg width="36" height="31" viewBox="0 0 36 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 3L3 15.5L16 28M34 15.5H5" stroke="#00A1DE" stroke-width="3" stroke-linecap="square"/>
+                  </svg>
+                </div>
+                <div class="main-swiper-button-next">
+                  <svg width="36" height="31" viewBox="0 0 36 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 3L33 15.5L20 28M2 15.5H31" stroke="#00A1DE" stroke-width="3" stroke-linecap="square"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>  
             </div>
           </div>
         </div>
@@ -169,14 +200,207 @@
           </div>
         </div>
       </section>
-      <section>
+      <section style="display: none;">
         <div class="container">
           <div class="equip">
-            
+            <div class="equip__top">
+              <h2 class="equip__top--title">
+                Оборудование
+              </h2>
+              <a href="#" class="equip__top--link">
+                <p>
+                  Все оборудование
+                </p>
+                <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.93801 1.5L17.938 9L9.93801 16.5" stroke="#00A1DE" stroke-width="2" stroke-linecap="square"></path>
+                  <path d="M1 9.00012L17 9.00012" stroke="#00A1DE" stroke-width="2" stroke-linecap="square"></path>
+                </svg>
+              </a>
+            </div>
+            <div class="equip__grid">
+              <a href="#" class="equip__grid--item">
+                <div class="equip__grid--order">
+                  под заказ
+                </div>
+                <div class="equip__grid--item-text">
+                  <span class="equip__grid--item-text_title">
+                    Газификационная установка
+                  </span>
+                  <p class="equip__grid--item-text_text">
+                    Позволит Вам осуществлять перевозку, хранение и выдачу газа (кислород, аргон, азот) в линию потребления или наполнения баллонов.
+                  </p>
+                </div>
+                <div class="equip__grid--item-arrow">
+                  <svg width="36" height="31" viewBox="0 0 36 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="icon_arrow">
+                    <path id="Vector" d="M20 3L33 15.5L20 28M2 15.5H31" stroke="#00A1DE" stroke-width="3" stroke-linecap="square"/>
+                    </g>
+                  </svg>
+                </div>
+                <div class="equip__grid--icon">
+                  <img src="assets/images/equip-1.svg" alt="equip">
+                </div>
+              </a>
+              <a href="#" class="equip__grid--item">
+                <div class="equip__grid--order">
+                  под заказ
+                </div>
+                <div class="equip__grid--item-text">
+                  <span class="equip__grid--item-text_title">
+                    Газосмесительные резервуары
+                  </span>
+                  <p class="equip__grid--item-text_text">
+                    Позволяет изготовить двухкомпонентные или трехкомпонентные смеси, подаватьих в магистраль или раскачивать по баллонам.
+                  </p>
+                </div>
+                <div class="equip__grid--item-arrow">
+                  <svg width="36" height="31" viewBox="0 0 36 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="icon_arrow">
+                    <path id="Vector" d="M20 3L33 15.5L20 28M2 15.5H31" stroke="#00A1DE" stroke-width="3" stroke-linecap="square"/>
+                    </g>
+                  </svg>
+                </div>
+                <div class="equip__grid--icon">
+                  <img src="assets/images/equip-2.svg" alt="equip">
+                </div>
+              </a>
+              <a href="#" class="equip__grid--item">
+                <div class="equip__grid--item-text">
+                  <span class="equip__grid--item-text_title">
+                    Газификатор
+                  </span>
+                  <p class="equip__grid--item-text_text">
+                    Для хранения и транспортировки газов в жидкообразном состоянии (кислород, аргон, азот) с последующей их газификацией и выдачей в систему потребителя под давлением.
+                  </p>
+                </div>
+                <div class="equip__grid--item-arrow">
+                  <svg width="36" height="31" viewBox="0 0 36 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="icon_arrow">
+                    <path id="Vector" d="M20 3L33 15.5L20 28M2 15.5H31" stroke="#00A1DE" stroke-width="3" stroke-linecap="square"/>
+                    </g>
+                  </svg>
+                </div>
+                <div class="equip__grid--icon-png">
+                  <img src="assets/images/equip-3.png" alt="equip">
+                </div>
+              </a>
+              <a href="#" class="equip__grid--item">
+                <div class="equip__grid--order">
+                  под заказ
+                </div>
+                <div class="equip__grid--item-text">
+                  <span class="equip__grid--item-text_title">
+                    Криоцилиндр
+                  </span>
+                  <p class="equip__grid--item-text_text">
+                    Двухстенный сосуд для хранения, транспортировки и газификации сжиженных газов (кислород, аргон, азот).
+                  </p>
+                </div>
+                <div class="equip__grid--item-arrow">
+                  <svg width="36" height="31" viewBox="0 0 36 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="icon_arrow">
+                    <path id="Vector" d="M20 3L33 15.5L20 28M2 15.5H31" stroke="#00A1DE" stroke-width="3" stroke-linecap="square"/>
+                    </g>
+                  </svg>
+                </div>
+                <div class="equip__grid--icon-equip4">
+                  <img src="assets/images/equip-4.svg" alt="equip">
+                </div>
+              </a>
+              <a href="#" class="equip__grid--item">
+                <div class="equip__grid--order">
+                  под заказ
+                </div>
+                <div class="equip__grid--item-text">
+                  <span class="equip__grid--item-text_title">
+                    Газовые рампы
+                  </span>
+                  <p class="equip__grid--item-text_text">
+                    Представляет собой единую систему, которая объединяет один и более газовых баллонов и является частью трубопровода высокого давления.  
+                  </p>
+                </div>
+                <div class="equip__grid--item-arrow">
+                  <svg width="36" height="31" viewBox="0 0 36 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="icon_arrow">
+                    <path id="Vector" d="M20 3L33 15.5L20 28M2 15.5H31" stroke="#00A1DE" stroke-width="3" stroke-linecap="square"/>
+                    </g>
+                  </svg>
+                </div>
+                <div class="equip__grid--icon">
+                  <img src="assets/images/equip-5.svg" alt="equip">
+                </div>
+              </a>
+              <a href="#" class="equip__grid--item">
+                <div class="equip__grid--order">
+                  под заказ
+                </div>
+                <div class="equip__grid--item-text">
+                  <span class="equip__grid--item-text_title">
+                    Резервуары для СПГ
+                  </span>
+                  <p class="equip__grid--item-text_text">
+                    Способ хранения в резервуарах при постоянно поддерживаемом незначительном избыточном давлении, близким к атмосферному и соответствующей этому давлению температуре кипения.
+                  </p>
+                </div>
+                <div class="equip__grid--item-arrow">
+                  <svg width="36" height="31" viewBox="0 0 36 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="icon_arrow">
+                    <path id="Vector" d="M20 3L33 15.5L20 28M2 15.5H31" stroke="#00A1DE" stroke-width="3" stroke-linecap="square"/>
+                    </g>
+                  </svg>
+                </div>
+                <div class="equip__grid--icon">
+                  <img src="assets/images/equip-1.svg" alt="equip">
+                </div>
+              </a>
+              <a href="#" class="equip__grid--item">
+                <div class="equip__grid--order">
+                  под заказ
+                </div>
+                <div class="equip__grid--item-text">
+                  <span class="equip__grid--item-text_title">
+                    Углекислотное оборудование: РХД и РХТУ
+                  </span>
+                  <p class="equip__grid--item-text_text">
+                    РДХ — Резервуары длительного хранения. РХТУ — резервуары для хранения и транспортировки углекислоты.
+                  </p>
+                </div>
+                <div class="equip__grid--item-arrow">
+                  <svg width="36" height="31" viewBox="0 0 36 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="icon_arrow">
+                    <path id="Vector" d="M20 3L33 15.5L20 28M2 15.5H31" stroke="#00A1DE" stroke-width="3" stroke-linecap="square"/>
+                    </g>
+                  </svg>
+                </div>
+                <div class="equip__grid--icon">
+                  <img src="assets/images/equip-7.svg" alt="equip">
+                </div>
+              </a>
+              <a href="#" class="equip__grid--item">
+                <div class="equip__grid--item-text">
+                  <span class="equip__grid--item-text_title">
+                    Резервуары для СПГ
+                  </span>
+                  <p class="equip__grid--item-text_text">
+                    Способ хранения в резервуарах при постоянно поддерживаемом незначительном избыточном давлении, близким к атмосферному и соответствующей этому давлению температуре кипения.
+                  </p>
+                </div>
+                <div class="equip__grid--item-arrow">
+                  <svg width="36" height="31" viewBox="0 0 36 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="icon_arrow">
+                    <path id="Vector" d="M20 3L33 15.5L20 28M2 15.5H31" stroke="#00A1DE" stroke-width="3" stroke-linecap="square"/>
+                    </g>
+                  </svg>
+                </div>
+                <div class="equip__grid--icon-png-last">
+                  <img src="assets/images/equip-8.png" alt="equip">
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </section>
-      <section>
+      <section style="display: none;">
         <div class="news">
           <div class="container">
             <div class="news__top">
@@ -263,7 +487,7 @@
           </div>
         </div>
       </section>
-      <section>
+      <section style="display: none;">
         <div class="qna">
           <div class="container">
             <h4 class="qna__title">
@@ -331,7 +555,7 @@
           </div>
         </div>
       </section>
-      <section>
+      <section style="display: none;">
         <div class="container">
           <div class="contacts">
             <div id="map" style="width: 100%; height: 400px;"></div>
@@ -339,7 +563,7 @@
         </div>
       </section>
     </main>
-    <footer>
+    <footer style="display: none;">
       <div class="footer">
         <div class="container">
           <div class="footer__items">
