@@ -20,7 +20,7 @@
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
   </head>
   <body>
-    <header style="display: none;">
+    <header>
       <section>
         <div class="container">
           <div class="header">
@@ -99,6 +99,86 @@
                   Заказать оборудование
                 </button>
               </div>
+              <div class="header__buttons--burger" x-data="{ open: false }">
+                <button class="header__buttons--burger_btn" @click="open = !open">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </button>
+                <div x-show="open" @click.away="open = false" @keydown.escape.window="open = false" x-transition:enter.duration.300ms x-transition:leave.duration.300ms class="header__buttons--burger_content">
+                  <div class="header__buttons--burger_content-header">
+                    <img src="assets/images/logo.svg" alt="logo">
+                    <button @click="open = !open">
+                      <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_133_6565)">
+                        <path d="M26.125 8.81375L24.1863 6.875L16.5 14.5613L8.81375 6.875L6.875 8.81375L14.5613 16.5L6.875 24.1863L8.81375 26.125L16.5 18.4387L24.1863 26.125L26.125 24.1863L18.4387 16.5L26.125 8.81375Z" fill="#00A1DE"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_133_6565">
+                        <rect width="33" height="33" fill="white"/>
+                        </clipPath>
+                        </defs>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="header__buttons--burger_content-search">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_133_6594)">
+                      <path d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z" fill="#00A1DE"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_133_6594">
+                      <rect width="24" height="24" fill="white"/>
+                      </clipPath>
+                      </defs>
+                    </svg>
+                    <input type="text" placeholder="Поиск">
+                  </div>
+                  <div class="header__buttons--burger_content-list">
+                    <ul>
+                      <li class="header__buttons--burger_content-list__item">
+                        <a href="#">Компания </a>
+                      </li>
+                      <li class="header__buttons--burger_content-list__item" x-data=" { isOpen:false }">
+                        <button @click="isOpen = !isOpen" :style="(isOpen) ? 'border-bottom:none;' : ''">
+                          Оборудование
+                          <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.13623 2.20093L7.13609 7.20093L12.136 2.20093" stroke="#00A1DE" stroke-width="2" stroke-linecap="square"/>
+                          </svg>
+                        </button>
+                        <div x-ref="container1" x-bind:style="isOpen ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''" class="header__buttons--burger_content-list__item-content">
+                          <ul>
+                            <li>
+                              <a href="#">ItemMenu</a>
+                            </li>
+                            <li>
+                              <a href="#">ItemMenu</a>
+                            </li>
+                            <li>
+                              <a href="#">ItemMenu</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="header__buttons--burger_content-list__item">
+                        <a href="#">Услуги</a>
+                      </li>
+                      <li class="header__buttons--burger_content-list__item">
+                        <a href="#">Новости </a>
+                      </li>
+                      <li class="header__buttons--burger_content-list__item">
+                        <a href="#">Контакты</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="header__buttons--burger_content-bottom">
+                    <a href="tel:+79203800299">+7 920 380-02-99</a>
+                    <div>
+                      <button>Заказать оборудование</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -158,7 +238,7 @@
           </div>
         </div>
       </section>
-      <section>
+      <section style="display: none;">
         <div class="about">
           <div class="container">
             <div class="about__title">
@@ -196,6 +276,247 @@
                   <path d="M1 9.00012L17 9.00012" stroke="#00A1DE" stroke-width="2" stroke-linecap="square"/>
                 </svg>
               </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section style="display: none;">
+        <div class="container">
+          <div class="services">
+            <div class="services__top">
+              <h3 class="services__top--title">
+                услуги
+              </h3>
+              <div class="services__top--link">
+                <button>Заказать услугу</button>
+              </div>
+            </div>
+            <div class="services__grid">
+              <div class="services__grid-item">
+                <span class="services__grid-item--number">
+                  01
+                </span>
+                <div class="services__grid-item--text">
+                  <span>
+                    Доставка оборудования покупателю
+                  </span>
+                  <div class="services__grid-item--text_inside">
+                    <p>
+                      Осуществим доставку любыми видами транспорта независимо от сложности маршрута.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="services__grid-item">
+                <span class="services__grid-item--number">
+                  02
+                </span>
+                <div class="services__grid-item--text">
+                  <span>
+                    Монтаж криогенного оборудования
+                  </span>
+                  <div class="services__grid-item--text_inside">
+                    <p>
+                      Наши сотрудники обучены и аттестованы в соответствии с требованиями Ростехнадзора и НАКС и имеют большой опыт работы.
+                    </p>
+                    <p>
+                      Выполним монтаж оборудования на объекте в соответствии с требованиями правил по охране труда.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="services__grid-item">
+                <span class="services__grid-item--number">
+                  03
+                </span>
+                <div class="services__grid-item--text">
+                  <span>
+                    Пуско-наладочные работы
+                  </span>
+                  <div class="services__grid-item--text_inside">
+                    <p>
+                      Один из самых важных этапов, когда оборудование находится под давлением после монтажа. Правильно проведенные работы позволят Вам без труда пройти первичное техническое освидетельствование.
+                    </p>
+                    <p>
+                      Все работы проводят аттестованные и опытные сотрудники нашей компании. 
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="services__grid-item">
+                <span class="services__grid-item--number">
+                  04
+                </span>
+                <div class="services__grid-item--text">
+                  <span>
+                    Техническое обслуживание
+                  </span>
+                  <div class="services__grid-item--text_inside">
+                    <p>
+                      Мы осуществляем диагностику оборудования, ремонтно-восстановительные работы, техническое обслуживание, техническое консультирование.
+                    <p>
+                      Делаем техническое обслуживание криогенного оборудования как собственной продуции, так и других производителей.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="services__grid-item">
+                <span class="services__grid-item--number">
+                  05
+                </span>
+                <div class="services__grid-item--text">
+                  <span>
+                    Обезжиривание
+                  </span>
+                  <div class="services__grid-item--text_inside">
+                    <p>
+                      Своевременная диагностика и уход за оборудованием — важные факторы долгосрочной эксплуатации. Важно избежать чрезвычайной ситуации из-за утечки газа. Для качественной службы оборудование необходимо обезжиривать не менее, чем 1 раз в год.
+                    <p>
+                      Для качественной службы оборудование необходимо обезжиривать не менее, чем 1 раз в год. Делаем по вашему запросу плановое или внештатное обезжиривание емкостного криогенного оборудования.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="services__grid-item">
+                <span class="services__grid-item--number">
+                  06
+                </span>
+                <div class="services__grid-item--text">
+                  <span>
+                    Ремонт
+                  </span>
+                  <div class="services__grid-item--text_inside">
+                    <p>
+                      В зависимости от сложности проводимых работ, наши специалисты проведут ремонтные работы на территории заказчика (диагностика, оценка герметичности, замена арматуры и т.п.) или у себя на производстве.
+                    <p>
+                      Виды и стоимость работ оговариваются индивидуально.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="services__slider">
+              <div class="swiper services-swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="services__grid-item">
+                      <span class="services__grid-item--number">
+                        01
+                      </span>
+                      <div class="services__grid-item--text">
+                        <span>
+                          Доставка оборудования покупателю
+                        </span>
+                        <div class="services__grid-item--text_inside">
+                          <p>
+                            Осуществим доставку любыми видами транспорта независимо от сложности маршрута.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="services__grid-item">
+                      <span class="services__grid-item--number">
+                        02
+                      </span>
+                      <div class="services__grid-item--text">
+                        <span>
+                          Монтаж криогенного оборудования
+                        </span>
+                        <div class="services__grid-item--text_inside">
+                          <p>
+                            Наши сотрудники обучены и аттестованы в соответствии с требованиями Ростехнадзора и НАКС и имеют большой опыт работы.
+                          </p>
+                          <p>
+                            Выполним монтаж оборудования на объекте в соответствии с требованиями правил по охране труда.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="services__grid-item">
+                      <span class="services__grid-item--number">
+                        03
+                      </span>
+                      <div class="services__grid-item--text">
+                        <span>
+                          Пуско-наладочные работы
+                        </span>
+                        <div class="services__grid-item--text_inside">
+                          <p>
+                            Один из самых важных этапов, когда оборудование находится под давлением после монтажа. Правильно проведенные работы позволят Вам без труда пройти первичное техническое освидетельствование.
+                          </p>
+                          <p>
+                            Все работы проводят аттестованные и опытные сотрудники нашей компании. 
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="services__grid-item">
+                      <span class="services__grid-item--number">
+                        04
+                      </span>
+                      <div class="services__grid-item--text">
+                        <span>
+                          Техническое обслуживание
+                        </span>
+                        <div class="services__grid-item--text_inside">
+                          <p>
+                            Мы осуществляем диагностику оборудования, ремонтно-восстановительные работы, техническое обслуживание, техническое консультирование.
+                          <p>
+                            Делаем техническое обслуживание криогенного оборудования как собственной продуции, так и других производителей.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="services__grid-item">
+                      <span class="services__grid-item--number">
+                        05
+                      </span>
+                      <div class="services__grid-item--text">
+                        <span>
+                          Обезжиривание
+                        </span>
+                        <div class="services__grid-item--text_inside">
+                          <p>
+                            Своевременная диагностика и уход за оборудованием — важные факторы долгосрочной эксплуатации. Важно избежать чрезвычайной ситуации из-за утечки газа. Для качественной службы оборудование необходимо обезжиривать не менее, чем 1 раз в год.
+                          <p>
+                            Для качественной службы оборудование необходимо обезжиривать не менее, чем 1 раз в год. Делаем по вашему запросу плановое или внештатное обезжиривание емкостного криогенного оборудования.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="services__grid-item">
+                      <span class="services__grid-item--number">
+                        06
+                      </span>
+                      <div class="services__grid-item--text">
+                        <span>
+                          Ремонт
+                        </span>
+                        <div class="services__grid-item--text_inside">
+                          <p>
+                            В зависимости от сложности проводимых работ, наши специалисты проведут ремонтные работы на территории заказчика (диагностика, оценка герметичности, замена арматуры и т.п.) или у себя на производстве.
+                          <p>
+                            Виды и стоимость работ оговариваются индивидуально.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="services__slider--btn">
+                <button>Заказать услугу</button>
+              </div>
             </div>
           </div>
         </div>
@@ -397,6 +718,207 @@
                 </div>
               </a>
             </div>
+            <div class="equip__slider">
+              <div class="swiper equip-swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a href="#" class="equip__grid--item">
+                      <div class="equip__grid--order">
+                        под заказ
+                      </div>
+                      <div class="equip__grid--item-text">
+                        <span class="equip__grid--item-text_title">
+                          Газификационная установка
+                        </span>
+                        <p class="equip__grid--item-text_text">
+                          Позволит Вам осуществлять перевозку, хранение и выдачу газа (кислород, аргон, азот) в линию потребления или наполнения баллонов.
+                        </p>
+                      </div>
+                      <div class="equip__grid--item-arrow">
+                        <svg width="36" height="31" viewBox="0 0 36 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g id="icon_arrow">
+                          <path id="Vector" d="M20 3L33 15.5L20 28M2 15.5H31" stroke="#00A1DE" stroke-width="3" stroke-linecap="square"/>
+                          </g>
+                        </svg>
+                      </div>
+                      <div class="equip__grid--icon">
+                        <img src="assets/images/equip-1.svg" alt="equip">
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#" class="equip__grid--item">
+                      <div class="equip__grid--order">
+                        под заказ
+                      </div>
+                      <div class="equip__grid--item-text">
+                        <span class="equip__grid--item-text_title">
+                          Газосмесительные резервуары
+                        </span>
+                        <p class="equip__grid--item-text_text">
+                          Позволяет изготовить двухкомпонентные или трехкомпонентные смеси, подаватьих в магистраль или раскачивать по баллонам.
+                        </p>
+                      </div>
+                      <div class="equip__grid--item-arrow">
+                        <svg width="36" height="31" viewBox="0 0 36 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g id="icon_arrow">
+                          <path id="Vector" d="M20 3L33 15.5L20 28M2 15.5H31" stroke="#00A1DE" stroke-width="3" stroke-linecap="square"/>
+                          </g>
+                        </svg>
+                      </div>
+                      <div class="equip__grid--icon">
+                        <img src="assets/images/equip-2.svg" alt="equip">
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#" class="equip__grid--item">
+                      <div class="equip__grid--item-text">
+                        <span class="equip__grid--item-text_title">
+                          Газификатор
+                        </span>
+                        <p class="equip__grid--item-text_text">
+                          Для хранения и транспортировки газов в жидкообразном состоянии (кислород, аргон, азот) с последующей их газификацией и выдачей в систему потребителя под давлением.
+                        </p>
+                      </div>
+                      <div class="equip__grid--item-arrow">
+                        <svg width="36" height="31" viewBox="0 0 36 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g id="icon_arrow">
+                          <path id="Vector" d="M20 3L33 15.5L20 28M2 15.5H31" stroke="#00A1DE" stroke-width="3" stroke-linecap="square"/>
+                          </g>
+                        </svg>
+                      </div>
+                      <div class="equip__grid--icon-png">
+                        <img src="assets/images/equip-3.png" alt="equip">
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#" class="equip__grid--item">
+                      <div class="equip__grid--order">
+                        под заказ
+                      </div>
+                      <div class="equip__grid--item-text">
+                        <span class="equip__grid--item-text_title">
+                          Криоцилиндр
+                        </span>
+                        <p class="equip__grid--item-text_text">
+                          Двухстенный сосуд для хранения, транспортировки и газификации сжиженных газов (кислород, аргон, азот).
+                        </p>
+                      </div>
+                      <div class="equip__grid--item-arrow">
+                        <svg width="36" height="31" viewBox="0 0 36 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g id="icon_arrow">
+                          <path id="Vector" d="M20 3L33 15.5L20 28M2 15.5H31" stroke="#00A1DE" stroke-width="3" stroke-linecap="square"/>
+                          </g>
+                        </svg>
+                      </div>
+                      <div class="equip__grid--icon-equip4">
+                        <img src="assets/images/equip-4.svg" alt="equip">
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#" class="equip__grid--item">
+                      <div class="equip__grid--order">
+                        под заказ
+                      </div>
+                      <div class="equip__grid--item-text">
+                        <span class="equip__grid--item-text_title">
+                          Газовые рампы
+                        </span>
+                        <p class="equip__grid--item-text_text">
+                          Представляет собой единую систему, которая объединяет один и более газовых баллонов и является частью трубопровода высокого давления.  
+                        </p>
+                      </div>
+                      <div class="equip__grid--item-arrow">
+                        <svg width="36" height="31" viewBox="0 0 36 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g id="icon_arrow">
+                          <path id="Vector" d="M20 3L33 15.5L20 28M2 15.5H31" stroke="#00A1DE" stroke-width="3" stroke-linecap="square"/>
+                          </g>
+                        </svg>
+                      </div>
+                      <div class="equip__grid--icon">
+                        <img src="assets/images/equip-5.svg" alt="equip">
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#" class="equip__grid--item">
+                      <div class="equip__grid--order">
+                        под заказ
+                      </div>
+                      <div class="equip__grid--item-text">
+                        <span class="equip__grid--item-text_title">
+                          Резервуары для СПГ
+                        </span>
+                        <p class="equip__grid--item-text_text">
+                          Способ хранения в резервуарах при постоянно поддерживаемом незначительном избыточном давлении, близким к атмосферному и соответствующей этому давлению температуре кипения.
+                        </p>
+                      </div>
+                      <div class="equip__grid--item-arrow">
+                        <svg width="36" height="31" viewBox="0 0 36 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g id="icon_arrow">
+                          <path id="Vector" d="M20 3L33 15.5L20 28M2 15.5H31" stroke="#00A1DE" stroke-width="3" stroke-linecap="square"/>
+                          </g>
+                        </svg>
+                      </div>
+                      <div class="equip__grid--icon">
+                        <img src="assets/images/equip-1.svg" alt="equip">
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#" class="equip__grid--item">
+                      <div class="equip__grid--order">
+                        под заказ
+                      </div>
+                      <div class="equip__grid--item-text">
+                        <span class="equip__grid--item-text_title">
+                          Углекислотное оборудование: РХД и РХТУ
+                        </span>
+                        <p class="equip__grid--item-text_text">
+                          РДХ — Резервуары длительного хранения. РХТУ — резервуары для хранения и транспортировки углекислоты.
+                        </p>
+                      </div>
+                      <div class="equip__grid--item-arrow">
+                        <svg width="36" height="31" viewBox="0 0 36 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g id="icon_arrow">
+                          <path id="Vector" d="M20 3L33 15.5L20 28M2 15.5H31" stroke="#00A1DE" stroke-width="3" stroke-linecap="square"/>
+                          </g>
+                        </svg>
+                      </div>
+                      <div class="equip__grid--icon">
+                        <img src="assets/images/equip-7.svg" alt="equip">
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#" class="equip__grid--item">
+                      <div class="equip__grid--item-text">
+                        <span class="equip__grid--item-text_title">
+                          Резервуары для СПГ
+                        </span>
+                        <p class="equip__grid--item-text_text">
+                          Способ хранения в резервуарах при постоянно поддерживаемом незначительном избыточном давлении, близким к атмосферному и соответствующей этому давлению температуре кипения.
+                        </p>
+                      </div>
+                      <div class="equip__grid--item-arrow">
+                        <svg width="36" height="31" viewBox="0 0 36 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g id="icon_arrow">
+                          <path id="Vector" d="M20 3L33 15.5L20 28M2 15.5H31" stroke="#00A1DE" stroke-width="3" stroke-linecap="square"/>
+                          </g>
+                        </svg>
+                      </div>
+                      <div class="equip__grid--icon-png-last">
+                        <img src="assets/images/equip-8.png" alt="equip">
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -491,7 +1013,7 @@
         <div class="qna">
           <div class="container">
             <h4 class="qna__title">
-              Цвет отвечает
+              «Цвет» отвечает
             </h4>
             <div class="qna__content">
               <div class="qna__content-qna">
@@ -558,7 +1080,27 @@
       <section style="display: none;">
         <div class="container">
           <div class="contacts">
-            <div id="map" style="width: 100%; height: 400px;"></div>
+            <div class="contacts__block">
+              <div>
+                <h4 class="contacts__block--title">
+                  Контакты
+                </h4>
+                <div class="contacts__block--text">
+                  <a target="_blank" href="https://yandex.ru/maps/-/CCUHY8RDxD">
+                    156961, г. Кострома ул. Локомотивная, д.1
+                  </a>
+                  <a href="mailto:natalya.kuritsyna@cwet.ru">
+                    natalya.kuritsyna@cwet.ru
+                  </a>
+                  <a href="tel:+79203800299">
+                    +7 920 380-02-99
+                  </a>
+                </div>
+              </div>
+              <div class="contacts__block--btn">
+                <button>Оставить заявку</button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -634,20 +1176,102 @@
                 </li>
               </ul>
             </div>
-            <div class="footer__items-contacts">
-              <a class="footer__items-contacts_phone" target="_blank" href="tel:+79203800299">+7 920 380-02-99</a>
-              <p class="footer__items-contacts_descr">Отдел продаж криогенного оборудования</p>
-              <a href="mailto:natalya.kuritsyna@cwet.ru" class="footer__items-contacts_mail">natalya.kuritsyna@cwet.ru</a>
-              <div class="footer__items-contacts_btn">
-                <button>Заказать оборудование</button>
-              </div>
-              <div class="footer__items-contacts_social">
-                <a href="#" target="_blank" class="footer__items-contacts_social-item">
-                  <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 27.84C0 14.7161 0 8.15416 4.07708 4.07708C8.15416 0 14.7161 0 27.84 0H30.16C43.2839 0 49.8458 0 53.9229 4.07708C58 8.15416 58 14.7161 58 27.84V30.16C58 43.2839 58 49.8458 53.9229 53.9229C49.8458 58 43.2839 58 30.16 58H27.84C14.7161 58 8.15416 58 4.07708 53.9229C0 49.8458 0 43.2839 0 30.16V27.84Z" fill="white"/>
-                    <path d="M30.3709 41.1425C17.5923 41.1425 10.3037 32.08 10 17H16.401C16.6112 28.0683 21.3301 32.7566 25.0678 33.7233V17H31.0952V26.5458C34.7862 26.1349 38.6637 21.785 39.972 17H45.9993C44.9947 22.8967 40.7897 27.2466 37.7995 29.0349C40.7897 30.4849 45.579 34.2791 47.4012 41.1425H40.7664C39.3414 36.5508 35.7908 32.9983 31.0952 32.5149V41.1425H30.3709Z" fill="#0065BD"/>
+            <div class="footer__items-accordion">
+              <div class="footer__items-accordion_item" x-data=" { isOpen:false }">
+                <button class="footer__items-accordion_item-btn" @click="isOpen = !isOpen" :style="(isOpen) ? 'border-bottom:none;' : ''">
+                  <p>Информация</p>
+                  <svg width="15" height="22" viewBox="0 0 15 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.13623 10.2012L7.13609 15.2012L12.136 10.2012" stroke="white" stroke-width="2" stroke-linecap="square"/>
                   </svg>
-                </a>
+                </button>
+                <div class="footer__items-accordion_item-content" x-ref="container1" x-bind:style="isOpen ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+                  <div class="footer__items-accordion_item-content-item">
+                    <ul>
+                      <li>
+                        <a href="#">Газосмесительные установки</a>
+                      </li>
+                      <li>
+                        <a href="#">Газификаторы</a>
+                      </li>
+                      <li>
+                        <a href="#">ГХК</a>
+                      </li>
+                      <li>
+                        <a href="#">Криоцилиндр</a>
+                      </li>
+                      <li>
+                        <a href="#">Газовые рампа</a>
+                      </li>
+                      <li>
+                        <a href="#">Резервуары для СПГ</a>
+                      </li>
+                      <li>
+                        <a href="#">Углекислотное оборудование: РХД и РХТУ</a>
+                      </li>
+                      <li>
+                        <a href="#">Цистерны транспортные криогенные</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="footer__items-accordion_item" x-data=" { isOpen:false }">
+                <button class="footer__items-accordion_item-btn" @click="isOpen = !isOpen" :style="(isOpen) ? 'border-bottom:none;' : ''">
+                  <p>Каталог</p>
+                  <svg width="15" height="22" viewBox="0 0 15 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.13623 10.2012L7.13609 15.2012L12.136 10.2012" stroke="white" stroke-width="2" stroke-linecap="square"/>
+                  </svg>
+                </button>
+                <div class="footer__items-accordion_item-content" x-ref="container1" x-bind:style="isOpen ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+                  <div class="footer__items-accordion_item-content-item">
+                    <ul>
+                      <li>
+                        <a href="#">Газосмесительные установки</a>
+                      </li>
+                      <li>
+                        <a href="#">Газификаторы</a>
+                      </li>
+                      <li>
+                        <a href="#">ГХК</a>
+                      </li>
+                      <li>
+                        <a href="#">Криоцилиндр</a>
+                      </li>
+                      <li>
+                        <a href="#">Газовые рампа</a>
+                      </li>
+                      <li>
+                        <a href="#">Резервуары для СПГ</a>
+                      </li>
+                      <li>
+                        <a href="#">Углекислотное оборудование: РХД и РХТУ</a>
+                      </li>
+                      <li>
+                        <a href="#">Цистерны транспортные криогенные</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="footer__items-contacts">
+              <div class="footer__items-contacts_grid">
+                <a class="footer__items-contacts_phone" target="_blank" href="tel:+79203800299">+7 920 380-02-99</a>
+                <p class="footer__items-contacts_descr">Отдел продаж криогенного оборудования</p>
+                <a href="mailto:natalya.kuritsyna@cwet.ru" class="footer__items-contacts_mail">natalya.kuritsyna@cwet.ru</a>
+              </div>
+              <div class="footer__items-contacts_grid">
+                <div class="footer__items-contacts_btn">
+                  <button>Заказать оборудование</button>
+                </div>
+                <div class="footer__items-contacts_social">
+                  <a href="#" target="_blank" class="footer__items-contacts_social-item">
+                    <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 27.84C0 14.7161 0 8.15416 4.07708 4.07708C8.15416 0 14.7161 0 27.84 0H30.16C43.2839 0 49.8458 0 53.9229 4.07708C58 8.15416 58 14.7161 58 27.84V30.16C58 43.2839 58 49.8458 53.9229 53.9229C49.8458 58 43.2839 58 30.16 58H27.84C14.7161 58 8.15416 58 4.07708 53.9229C0 49.8458 0 43.2839 0 30.16V27.84Z" fill="white"/>
+                      <path d="M30.3709 41.1425C17.5923 41.1425 10.3037 32.08 10 17H16.401C16.6112 28.0683 21.3301 32.7566 25.0678 33.7233V17H31.0952V26.5458C34.7862 26.1349 38.6637 21.785 39.972 17H45.9993C44.9947 22.8967 40.7897 27.2466 37.7995 29.0349C40.7897 30.4849 45.579 34.2791 47.4012 41.1425H40.7664C39.3414 36.5508 35.7908 32.9983 31.0952 32.5149V41.1425H30.3709Z" fill="#0065BD"/>
+                    </svg>
+                  </a>
+                </div>
               </div>
             </div>
           </div>

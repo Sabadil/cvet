@@ -1,0 +1,125 @@
+.company {
+    &__top {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    
+            img {
+                width: 100%;
+            }
+    
+        &--text {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 20px;
+            line-height: 140%;
+    
+                &-title {
+                    font-size: 58px;
+                    line-height: 120%;
+                    text-transform: lowercase;
+                    font-family: $title_font;
+                }
+                p {
+                    max-width: 670px;
+                }
+        }
+    }
+    &__values {
+        margin-top: 100px;
+
+            &--title {
+                font-size: 52px;
+                line-height: 120%;
+                font-family: $title_font;
+                text-transform: lowercase;
+            }
+            &--items {
+                margin-top: 30px;
+                display: grid;
+                grid-template-columns: repeat(12, minmax(0, 1fr));
+                gap: 20px;
+
+                    &-item {
+                        padding: 10px 30px 47px;
+                        border-radius: 20px;
+                        border: 1px solid $light_blue;
+                        grid-column: span 3 / span 3;
+                        gap: 16px;
+                        display: flex;
+                        flex-direction: column;
+
+                            &_text {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 11px;
+
+                                    &-title {
+                                        font-size: 26px;
+                                        max-width: 265px;
+                                        line-height: 126%;
+                                    }
+                                    &-text {
+                                        font-size: 16px;
+                                        line-height: 130%;
+                                        max-width: 265px;
+                                    }
+                            }
+                    }
+            }
+    }
+    &__adv {
+        display: grid;
+        margin-top: 100px;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        row-gap: 60px;
+
+            &-item {
+                grid-column: span 3 / span 3;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                    &--first {
+                        grid-column: span 6 / span 6;
+
+                            p {
+                                font-size: 52px;
+                                line-height: 120%;
+                                text-transform: lowercase;
+                                max-width: 555px;
+                                font-family: $title_font;
+                            }
+                    }
+
+                &--text {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                        span {
+                            font-size: 26px;
+                            line-height: 126%;
+                        }
+                        p {
+                            font-size: 16px;
+                            line-height: 140%;
+                            max-width: 315px;
+                        }
+                }
+            }
+    }
+    &__style {
+        margin-top: 100px;
+
+            &--title {
+                font-size: 52px;
+                line-height: 120%;
+                text-transform: lowercase;
+                font-family: $title_font;
+            }
+    }
+}

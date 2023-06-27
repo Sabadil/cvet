@@ -29,6 +29,33 @@ document.addEventListener('DOMContentLoaded', () => {
     const swiperNews = new Swiper(".news__content--swiper", {
         slidesPerView: 3,
         spaceBetween: 20,
+        breakpoints: {
+          // mobile + tablet - 320-990
+          320: {
+            slidesPerView: 1.2
+          },
+          // desktop >= 991
+          768: {
+            slidesPerView: 1.7
+          },
+          991: {
+            slidesPerView: 3
+          }
+        }
       });
+
+      const swiperEquip = new Swiper(".equip-swiper", {
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+
+      const swiperServices = new Swiper(".services-swiper", {
+        slidesPerView: 1.1,
+        spaceBetween: 20,
+      });
+
+      
 
 })
