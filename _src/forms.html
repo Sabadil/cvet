@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forms</title>
+</head>
+<body>
+    <button data-custom-open="modal-1">Modal 1</button>
+
+
+    <section>
+        <div id="modal-1" class="modal micromodal-slide" aria-hidden="true">
+            <div tabindex="-1" class="modal__overlay" data-custom-close="modal-1">
+                <div role="dialog" class="accept__container" aria-modal="true" aria-labelledby="modal-1-title" >
+                        <button class="button-close" data-custom-close="modal-1">
+                            <svg data-custom-close="modal-1" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L20 20" stroke="#323436" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M1 20.0001L20 1.00008" stroke="#323436" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                    <div id="accept__container--content" class="modal__content">
+                        Modal Content
+                    </div>
+                </div>
+            </div>
+            </div>
+    </section>
+</body>
+<script type="module" src="app.js"></script>
+</html>

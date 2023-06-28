@@ -7,6 +7,7 @@ import './reset.css';
 import './app.scss';
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
+import 'micromodal';
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -64,6 +65,30 @@ document.addEventListener('DOMContentLoaded', () => {
           nextEl: ".swiper-button-next-company",
           prevEl: ".swiper-button-prev-company",
         },
+      });
+
+      const swiperDetail = new Swiper(".detail-swiper", {
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next-detail",
+          prevEl: ".swiper-button-prev-detail",
+        },
+      });
+
+
+      //micromodal
+
+      MicroModal.init({
+        openTrigger: 'data-custom-open', // [3]
+        closeTrigger: 'data-custom-close', // [4]
+        openClass: 'is-open', // [5]
+        disableScroll: true, // [6]
+        disableFocus: false, // [7]
+        awaitOpenAnimation: false, // [8]
+        awaitCloseAnimation: false, // [9]
+        debugMode: true // [10]
       });
 
 })

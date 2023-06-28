@@ -1,0 +1,206 @@
+.detail {
+    margin-top: 24px;
+
+        &__grid {
+            display: grid;
+            grid-template-columns: repeat(12, minmax(0, 1fr));
+            gap: 20px;
+
+                &--left {
+                    grid-column: span 4 / span 4;
+
+                    .detail-swiper {
+                        img {
+                            width: 100%;
+                        }
+                    .detail_nav {
+                        position: relative;
+                        display: flex;
+                        justify-content: space-between;
+                        padding-top: 10px;
+                    }
+                    .swiper-button-prev-detail {
+                        padding: 15px 7px 11px 12px;
+                        border-radius: 20px;
+                        backdrop-filter: blur(2.5px);
+                        background: rgba(255, 255, 255, 0.14);
+                        cursor: pointer;
+
+                        svg path {
+                            transition: all 0.3s;
+                        }
+                
+                            &:hover svg path {
+                                stroke: $blue;
+                                transition: all 0.3s;
+                            }
+                    }
+                    .swiper-button-next-detail {
+                        padding: 15px 12px 11px 7px;
+                        border-radius: 20px;
+                        backdrop-filter: blur(2.5px);
+                        background: rgba(255, 255, 255, 0.14);
+                        cursor: pointer;
+
+                        svg path {
+                            transition: all 0.3s;
+                        }
+                
+                            &:hover svg path {
+                                stroke: $blue;
+                                transition: all 0.3s;
+                            }
+                    }
+                    .swiper-pagination  {
+                        position: relative;
+                        top: 20px;
+                    }
+                    .swiper-pagination-bullet {
+                        background: $light_blue;
+                        opacity: 1;
+                
+                            &-active {
+                                background: white;
+                                border: 1px solid $light_blue;
+                            }
+                    }
+                    .swiper-button-disabled svg path {
+                        stroke: #C9CACA;
+                        transition: all 0.3s;
+                    }
+                    }
+                }
+                &--right {
+                    grid-column-start: 6;
+                    grid-column-end: 13;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 30px;
+
+                        &_text {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 20px;
+
+                                &-title {
+                                    font-size: 58px;
+                                    line-height: 120%;
+                                    text-transform: lowercase;
+                                    font-family: $title_font;
+                                }
+                                &-text {
+                                    font-size: 16px;
+                                    line-height: 140%;
+                                }
+                        }
+
+                        &_list {
+                            display: flex;
+                            gap: 20px;
+                            flex-direction: column;
+
+                                &-title {
+                                    font-size: 18px;
+                                    font-weight: 600;
+                                    line-height: 140%;
+                                }
+                                &-list {
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 20px;
+
+                                        li {
+                                            display: flex;
+                                            align-items: center;
+                                            gap: 10px;
+                                            line-height: 140%;
+                                            font-size: 16px;
+                                        }
+                                }
+                        }
+                        &_size {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 20px;
+
+                                &-title {
+                                    font-weight: 600;
+                                    font-size: 18px;
+                                }
+                                &-inputs {
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 6px;
+
+                                    .customCheckBoxHolder {
+                                        margin: 5px;
+                                        display: flex;
+                                      }
+                                      
+                                      .customCheckBox {
+
+                                        position: relative;
+                                        overflow: hidden;
+                                        cursor: pointer;
+                                        user-select: none;
+                                        padding: 10px 15px;
+                                        background-color: transparent;
+                                        color: $grey;
+                                        display: flex;
+                                        align-items: center;
+                                        outline: none;
+                                        justify-content: center;
+                                        border: 1px solid $grey;
+                                        transition: all 0.3s;
+                                        border-radius: 5px;
+                                      }
+                                      
+                                      .customCheckBox:hover {
+                                        border: 1px solid $black;
+                                        color: $black;
+                                      }
+                                      
+                                      .customCheckBox .inner {
+                                        font-size: 18px;
+                                        font-weight: 900;
+                                        pointer-events: none;
+                                        transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+                                        transition-duration: 300ms;
+                                        transition-property: transform;
+                                        transform: translateY(0px);
+                                      }        
+                                      .customCheckBoxInput {
+                                        display: none;
+                                      }
+                                      
+                                      .customCheckBoxInput:checked + .customCheckBoxWrapper .customCheckBox {
+                                        background-color: transparent;
+                                        color: $black;
+                                        border: 1px solid $black;
+                                      }
+                                       
+                                      .customCheckBoxInput:checked + .customCheckBoxWrapper .customCheckBox:hover {
+                                        border: 1px solid $black;
+                                      }
+                                }
+
+                            &-button {
+                                button {
+                                    padding: 18px 30px;
+                                    border-radius: 23px;
+                                    border: 1px solid $light_blue;
+                                    font-size: 18px;
+                                    color: $light_blue;
+                                    transition: all 0.3s;
+
+                                        &:hover {
+                                            background: $blue;
+                                            color: $white;
+                                            box-shadow: 0px 2px 2px 0px rgba(0, 101, 189, 0.20), 0px 4px 4px 0px rgba(50, 52, 54, 0.15);
+                                        }
+                                }
+                            }
+                        }
+                }
+        }
+}
