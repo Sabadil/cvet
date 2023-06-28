@@ -121,5 +121,155 @@
                 text-transform: lowercase;
                 font-family: $title_font;
             }
+            &--grid {
+                display: grid;
+                grid-template-columns: repeat(12, minmax(0, 1fr));
+                gap: 20px;
+                margin-top: 20px;
+
+                    &_item {
+                        grid-column: span 3 / span 3;
+                        padding: 40px 53px 200px 30px;
+                        border-radius: 20px;
+                        border: 1px solid $light_blue;
+                        background-image: url('data:image/svg+xml,%3Csvg width="290" height="216" viewBox="0 0 290 216" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath opacity="0.06" fill-rule="evenodd" clip-rule="evenodd" d="M110.495 208.217C150.04 206.23 183.77 193.515 200.053 176.031V146.229C220.214 147.421 241.537 151.394 258.984 160.136C261.698 161.726 265.575 164.11 269.452 167.289V228.88C265.575 231.661 261.698 234.045 258.984 235.635C238.436 245.966 212.46 249.94 189.973 249.94C167.099 249.94 141.511 245.966 120.963 235.635C118.249 234.045 113.984 231.661 110.495 228.88V208.217ZM254.332 135.5C269.452 129.937 282.246 122.387 290 113.248V32.5836C272.553 13.1129 234.171 0 189.973 0C145.388 0 107.393 13.1129 89.5588 32.5836V62.3856C49.6257 64.3724 15.8957 77.4853 0 94.9692V176.031C15.8957 193.515 49.6257 206.23 89.5588 208.217V238.416C107.393 257.887 145.388 271 189.973 271C234.171 271 272.553 257.887 290 238.416V157.752C282.246 148.613 269.452 141.063 254.332 135.5ZM89.5588 83.8431V113.248C97.7005 122.387 110.107 129.937 125.615 135.5C110.107 141.063 97.7005 148.613 89.5588 157.752V187.157C69.7861 185.965 48.4626 181.991 31.016 173.249C28.3021 171.66 24.4251 169.276 20.1604 166.494V104.506C24.4251 101.724 28.3021 99.3402 31.016 97.7507C48.4626 89.0088 69.7861 85.0352 89.5588 83.8431ZM110.495 103.711V83.8431C130.267 85.0352 151.591 89.0088 169.037 97.7507C171.364 99.3402 175.628 101.724 179.505 104.506V124.771C159.733 123.579 138.409 119.606 120.963 110.466C118.249 109.274 113.984 106.89 110.495 103.711ZM110.495 62.3856V42.1202C113.984 38.9414 118.249 36.5572 120.963 35.3651C141.511 24.6364 167.099 21.0601 189.973 21.0601C212.46 21.0601 238.436 24.6364 258.984 35.3651C261.698 36.5572 265.575 38.9414 269.452 42.1202V103.711C265.575 106.89 261.698 109.274 258.984 110.466C241.537 119.606 220.214 123.579 200.053 124.771V94.9692C183.77 77.4853 150.04 64.3724 110.495 62.3856ZM110.495 187.157V167.289C113.984 164.11 118.249 161.726 120.963 160.136C138.409 151.394 159.733 147.421 179.505 146.229V166.494C175.628 169.276 171.364 171.66 169.037 173.249C151.591 181.991 130.267 185.965 110.495 187.157Z" fill="%2300A1DE"/%3E%3C/svg%3E');
+                        background-repeat: no-repeat;
+                        background-position: bottom right;
+                        background-size: auto;
+
+                            &-text {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 10px;
+
+                                    span {
+                                        font-size: 26px;
+                                        line-height: 126%;
+                                    }
+                                    p {
+                                        line-height: 130%;
+                                        font-size: 16px;
+                                        max-width: 242px;
+                                    }
+                            }
+                    }
+            }
+    }
+    &__work {
+        margin-top: 100px;
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        gap: 20px;
+
+            &--left {
+                grid-column: span 3 / span 3;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+
+                    &_title {
+                        line-height: 120%;
+                        font-size: 52px;
+                        font-family: $title_font;
+                        text-transform: lowercase;
+                        max-width: 320px;
+                    }
+                    &_text {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 40px;
+                        font-size: 16px;
+                        line-height: 140%;
+
+                            &-bottom {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 20px;
+
+                                    span {
+                                        line-height: 140%;
+                                        font-weight: 500;
+                                        font-size: 20px;
+                                        max-width: 325px;
+                                    }
+
+                                &--links {
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 6px;
+
+                                        a {
+                                            font-size: 20px;
+                                            color: $blue;
+                                            line-height: 120%;
+                                        }
+                                }
+                            }
+                    }
+            }
+            &--right  {
+                grid-column: span 9 / span 9;
+
+                    .company-work {
+                        img {
+                            width: 100%;
+                        }
+                    .company_nav {
+                        position: relative;
+                        display: flex;
+                        justify-content: space-between;
+                        padding-top: 10px;
+                    }
+                    .swiper-button-prev-company {
+                        padding: 15px 7px 11px 12px;
+                        border-radius: 20px;
+                        backdrop-filter: blur(2.5px);
+                        background: rgba(255, 255, 255, 0.14);
+                        cursor: pointer;
+
+                        svg path {
+                            transition: all 0.3s;
+                        }
+                
+                            &:hover svg path {
+                                stroke: $blue;
+                                transition: all 0.3s;
+                            }
+                    }
+                    .swiper-button-next-company {
+                        padding: 15px 12px 11px 7px;
+                        border-radius: 20px;
+                        backdrop-filter: blur(2.5px);
+                        background: rgba(255, 255, 255, 0.14);
+                        cursor: pointer;
+
+                        svg path {
+                            transition: all 0.3s;
+                        }
+                
+                            &:hover svg path {
+                                stroke: $blue;
+                                transition: all 0.3s;
+                            }
+                    }
+                    .swiper-pagination  {
+                        position: relative;
+                        top: 20px;
+                    }
+                    .swiper-pagination-bullet {
+                        background: $light_blue;
+                        opacity: 1;
+                
+                            &-active {
+                                background: white;
+                                border: 1px solid $light_blue;
+                            }
+                    }
+                    .swiper-button-disabled svg path {
+                        stroke: #C9CACA;
+                        transition: all 0.3s;
+                    }
+                    }
+            }
     }
 }

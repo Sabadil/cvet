@@ -56,6 +56,14 @@ document.addEventListener('DOMContentLoaded', () => {
         spaceBetween: 20,
       });
 
-      
+      const swiperCompanyWork = new Swiper(".company-work", {
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next-company",
+          prevEl: ".swiper-button-prev-company",
+        },
+      });
 
 })
