@@ -203,4 +203,207 @@
                         }
                 }
         }
+        &__tabs {
+            margin-top: 70px;
+
+                &-btns {
+                    display: flex;
+                    align-items: center;
+                    gap: 51px;
+                    border-bottom: 1px solid $blue;
+
+                        &_btn {
+                            font-size: 20px;
+                            line-height: 140%;
+                            padding: 10px;
+                        }
+                }
+                &-content {
+                    margin-top: 30px;
+
+                        &_char {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 30px;
+
+                                &-size {
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 10px;
+
+                                        &--inputs {
+                                            display: flex;
+                                            align-items: center;
+                                            gap: 5px;
+                                            .customCheckBoxHolder {
+                                                margin: 5px;
+                                                display: flex;
+                                              }
+                                              
+                                              .customCheckBox {
+        
+                                                position: relative;
+                                                overflow: hidden;
+                                                cursor: pointer;
+                                                user-select: none;
+                                                padding: 10px 15px;
+                                                background-color: transparent;
+                                                color: $grey;
+                                                display: flex;
+                                                align-items: center;
+                                                outline: none;
+                                                justify-content: center;
+                                                border: 1px solid $light_blue;
+                                                color: $light_blue;
+                                                transition: all 0.3s;
+                                                border-radius: 5px;
+                                              }
+                                              
+                                              .customCheckBox:hover {
+                                                border: 1px solid $light_blue;
+                                                color: $white;
+                                                background-color: $light_blue;
+                                              }
+                                              
+                                              .customCheckBox .inner {
+                                                font-size: 18px;
+                                                font-weight: 900;
+                                                pointer-events: none;
+                                                transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+                                                transition-duration: 300ms;
+                                                transition-property: transform;
+                                                transform: translateY(0px);
+                                              }        
+                                              .customCheckBoxInput {
+                                                display: none;
+                                              }
+                                              
+                                              .customCheckBoxInput:checked + .customCheckBoxWrapper .customCheckBox {
+                                                border: 1px solid $light_blue;
+                                                color: $white;
+                                                background-color: $light_blue;
+                                              }
+                                        }
+                                        &--info {
+                                            max-width: 350px;
+
+                                            ul {
+                                                display: flex;
+                                                flex-direction: column;
+                                                gap: 20px;
+
+                                                li {
+                                                    padding-bottom: 10px;
+                                                    border-bottom: 1px solid #ADAFAF;
+                                                    display: flex;
+                                                    justify-content: space-between;
+                                                    align-items: center;
+
+                                                        span {
+                                                            color: #747678;
+                                                            font-size: 14px;
+                                                            line-height: 140%;
+                                                        }
+                                                        p {
+                                                            font-size: 16px;
+                                                            line-height: 140%;
+                                                        }
+                                                }
+                                            } 
+                                        }
+                                }
+                        }
+
+                        &_comp {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 30px;
+
+                                span {
+                                    font-size: 16px;
+                                    line-height: 140%;
+                                    color: #323436;
+                                }
+                            ul {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 30px;
+                                max-width: 625px;
+
+                                    li {
+                                        display: flex;
+                                        align-items: center;
+                                        gap: 10px;
+
+                                        svg {
+                                            min-width: 8px;
+                                            min-height: 12px;
+                                        }
+                                        
+
+                                            p {
+                                                font-size: 16px;
+                                                line-height: 140%;
+                                            }
+                                    }
+                            }
+                        }
+                        &_info {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 40px;
+
+                                p {
+                                    max-width: 555px;
+                                    font-size: 16px;
+                                    line-height: 140%;
+                                }
+
+                            &-list {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 20px;
+
+                                    ul {
+                                        display: flex;
+                                        flex-direction: column;
+                                        gap: 10px;
+
+                                            li {
+                                                display: flex;
+                                                align-items: center;
+                                                gap: 10px;
+
+                                                    p {
+                                                        font-size: 16px;
+                                                        line-height: 140%;
+                                                    }
+                                            }
+                                    }
+                            }
+                        }
+                        &_how {
+                            ul {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 30px;
+
+                                    li {
+                                        display: flex;
+                                        align-items: center;
+                                        gap: 15px;
+
+                                            p {
+                                                max-width: 667px;
+                                                font-size: 16px;
+                                                line-height: 140%;
+                                            }
+                                    }
+                            }
+                        }
+                }
+                .active {
+                    border-bottom: 3px solid $light_blue;
+                }
+        }
 }

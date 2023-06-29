@@ -1,0 +1,119 @@
+.contacts-page {
+    margin-top: 30px;
+
+        &__title {
+            font-size: 58px;
+            font-family: $title_font;
+            line-height: 120%;
+            text-transform: lowercase;
+        }
+        &__grid {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(12, minmax(0, 1fr));
+
+                &-links {
+                    grid-column: span 4 / span 4;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 40px;
+
+                        &_map {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 15px;
+
+                                a {
+                                    font-size: 26px;
+                                    line-height: 126%;
+                                    max-width: 300px;
+                                }
+                                button {
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 10px;
+
+                                        p {
+                                            border-bottom: 1px solid $light_blue;
+                                            color: $light_blue;
+                                            font-size: 18px;
+                                        }
+                                }
+                        }
+                        &_social {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+
+                                a {
+                                    font-size: 26px;
+                                    line-height: 126%;
+                                }
+                        }
+                }
+                &-requisites {
+                    grid-column: span 8 / span 8;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 30px;
+
+                        &_title {
+                            line-height: 126%;
+                            font-size: 26px;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 20px;
+
+                                a {
+                                    padding: 10px;
+                                    border-radius: 8px;
+                                    border: 1px solid $light_blue;
+                                    color: $light_blue;
+                                    font-size: 16px;
+                                    line-height: 140%;
+                                    transition: all 0.3s;
+
+                                        &:hover {
+                                            color: $white;
+                                            box-shadow: 0px 2px 2px 0px rgba(0, 101, 189, 0.20), 0px 4px 4px 0px rgba(50, 52, 54, 0.15);
+                                            background: $blue;
+                                        }
+                                }
+                        }
+                        &_items {
+                            display: grid;
+                            grid-template-columns: repeat(8, minmax(0, 1fr));
+
+                                &-first {
+                                    grid-column: span 3 / span 3;
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 20px;
+                                }
+                                &-second  {
+                                    grid-column-start: 4;
+                                    grid-column-end: 9;
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 20px;
+                                }
+
+                            &--item {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 10px;
+
+                                    span {
+                                        font-size: 14px;
+                                        color: #747678;
+                                        line-height: 140%;
+                                    }
+                                    p {
+                                        font-size: 16px;
+                                        line-height: 140%;
+                                    }
+                            }
+                        }
+                }
+        }
+}

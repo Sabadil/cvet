@@ -1,0 +1,65 @@
+.error {
+    background: url(assets/images/404.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 100vh;
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            justify-content: center;
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+
+                &--title {
+                    font-family: $title_font;
+                    line-height: 110%;
+                    text-transform: lowercase;
+                    font-size: 58px;
+                    max-width: 555px;
+                    text-align: center;
+                }
+                &--btns {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+
+                        &-show {
+                            display: flex;
+                            align-items: center;
+                            gap: 15px;
+                            padding: 18px 30px;
+                            border-radius: 23px;
+                            background: $light_blue;
+                            color: $white;
+                            font-size: 18px;
+                            transition: all 0.3s;
+
+                                &:hover {
+                                    background: $blue;
+                                    color: $white;
+                                    box-shadow: 0px 4px 4px 0px rgba(21, 36, 50, 0.15), 0px 2px 2px 0px rgba(0, 101, 189, 0.20);
+                                }
+                        }
+                        &-home {
+                            padding: 18px 30px;
+                            border: 1px solid $light_blue;
+                            border-radius: 23px;
+                            font-size: 18px;
+                            color: $light_blue;
+                            transition: all 0.3s;
+                            background: $white;
+
+                                &:hover {
+                                    background: $blue;
+                                    color: $white;
+                                    box-shadow: 0px 4px 4px 0px rgba(21, 36, 50, 0.15), 0px 2px 2px 0px rgba(0, 101, 189, 0.20);
+                                }
+                        }
+                }
+        }
+}
